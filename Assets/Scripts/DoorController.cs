@@ -6,7 +6,7 @@ public class DoorController : MonoBehaviour {
     public GameObject left, right;
     public float yaw;
 
-    public enum State { OPEN, CLOSED };
+    public enum State { OPEN, OPENING, CLOSED, CLOSING };
     private State state;
 
     public float moveTime = 0.25f;
@@ -14,6 +14,12 @@ public class DoorController : MonoBehaviour {
     public float moveDist = 0.85f;
     public float moveAngle = 0f;
 
+    public bool toggle = true;
+    public float waitTime = 2f;
+
+    private float timeToClose = 0;
+
+    public GvrAudioSource sound;
 
     private Vector3 startL, targetL, startR, targetR;
 
@@ -25,8 +31,6 @@ public class DoorController : MonoBehaviour {
 
         targetL = startL + (Quaternion.Euler(0, moveAngle, 0) * (new Vector3(moveDist, 0, 0)));
         targetR = startR + (Quaternion.Euler(0, moveAngle, 0) * (new Vector3(-moveDist, 0, 0)));
-
-        Open();
     }
 	
 	// Update is called once per frame
@@ -34,28 +38,39 @@ public class DoorController : MonoBehaviour {
 
 	}
 
-    void Open()
+    void FixedUpdate()
     {
+        if (state == State.OPEN && !toggle && Time.time > timeToClose)
+        {
+            Close();
+        }
+    }
+
+    public void Open()
+    {
+        sound.Play();
         if (state != State.CLOSED)
         {
             return;
         }
+        state = State.OPENING;
         StartCoroutine("OpenRoutine");
     }
 
-    void Close()
+    public void Close()
     {
+        sound.Play();
         if (state != State.OPEN)
         {
             return;
         }
+        state = State.CLOSING;
         StartCoroutine("CloseRoutine");
     }
 
     // https://forum.unity3d.com/threads/open-door-script.19019/
     IEnumerator OpenRoutine()
     {
-        yield return new WaitForSeconds(1);
         var endTime = Time.time + moveTime;
 
         while (Time.time < endTime)
@@ -67,6 +82,8 @@ public class DoorController : MonoBehaviour {
 
         left.transform.position = targetL;
         right.transform.position = targetR;
+        state = State.OPEN;
+        timeToClose = Time.time + waitTime;
     }
 
     IEnumerator CloseRoutine()
@@ -82,5 +99,6 @@ public class DoorController : MonoBehaviour {
 
         left.transform.position = startL;
         right.transform.position = startR;
+        state = State.CLOSED;
     }
 }

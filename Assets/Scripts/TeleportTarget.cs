@@ -8,6 +8,7 @@ public class TeleportTarget : MonoBehaviour
     public Camera cam;
     public GameObject cube;
 
+    public float blinkSpeed = .4f;
     public float speed = 1f;
     private float curSpeed = 1f;
 
@@ -28,7 +29,7 @@ public class TeleportTarget : MonoBehaviour
 
     public void MoveMe()
     {
-        CameraFade.StartAlphaFade(Color.black, false, 0.3f, 0f, () =>
+        CameraFade.StartAlphaFade(Color.black, false, blinkSpeed, 0f, () =>
         {
             Vector3 newPos = transform.position;
             newPos.y += offset;
@@ -44,7 +45,7 @@ public class TeleportTarget : MonoBehaviour
 
             // except this one...
             cube.SetActive(false);
-            CameraFade.StartAlphaFade(Color.black, true, 0.3f, 0f, null);
+            CameraFade.StartAlphaFade(Color.black, true, blinkSpeed, 0f, null);
         });
     }
 

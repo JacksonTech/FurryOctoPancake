@@ -154,6 +154,7 @@
     <Compile Include="Assets\GoogleVR\Scripts\Utilities\GvrFPS.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\Utilities\GvrIntent.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\Video\GvrVideoPlayerTexture.cs" />
+    <Compile Include="Assets\Scripts\Button.cs" />
     <Compile Include="Assets\Scripts\DoorController.cs" />
     <Compile Include="Assets\Scripts\KentymanFade.cs" />
     <Compile Include="Assets\Scripts\TeleportTarget.cs" />
