@@ -7,6 +7,8 @@
 /[Ll]ibrary/
 sysinfo.txt
 *.stackdump
+# no builds!
+*.apk 
  
  # ============================================= #
  # Visual Studio / MonoDevelop / Rider generated #

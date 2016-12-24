@@ -20,6 +20,7 @@ public class TeleportTarget : MonoBehaviour
 
     void Start()
     {
+        // left over from when I was using setEnabled instead of disabling the renderer. Don't want to disable scripts!
         if (cubes == null)
         {
             cubes = GameObject.FindGameObjectsWithTag("MoveTarget");
@@ -35,16 +36,25 @@ public class TeleportTarget : MonoBehaviour
             newPos.y += offset;
             cam.transform.position = newPos;
 
+            MeshRenderer render;
+
             // mark all cubes as visited
-            if (cubes != null) { 
+            if (cubes != null) {
+                
                 foreach (GameObject obj in cubes)
                 {
-                    obj.SetActive(true);
+                    if (obj != null)
+                    {
+                        render = obj.GetComponent<MeshRenderer>();
+                        render.enabled = true;
+                    }
                 }
             }
 
             // except this one...
-            cube.SetActive(false);
+            render = gameObject.GetComponentInChildren<MeshRenderer>();
+            render.enabled = false;
+
             CameraFade.StartAlphaFade(Color.black, true, blinkSpeed, 0f, null);
         });
     }
