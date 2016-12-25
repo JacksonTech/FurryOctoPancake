@@ -8,19 +8,23 @@ public class TeleportTarget : MonoBehaviour
     public Camera cam;
     public GameObject cube;
 
-    public float blinkSpeed = .4f;
+    public float blinkSpeed = .3f;
 
-    public float maxSpeed = 1f;
-    public float minSpeed = 0.5f;
+    public float maxSpeed = 4f;
+    public float minSpeed = 1f;
     private float speed;
 
-    public float minSize = 0.25f;
-    public float maxSize = 0.5f;
+    public float minSize = 0.35f;
+    public float maxSize = 0.46f;
     private float size;
 
-    public float minAlpha = 0.2f;
-    public float maxAlpha = 1f;
+    public float minAlpha = 0.3f;
+    public float maxAlpha = 0.7f;
     private float alpha;
+
+    public float minEmit = 0.0f;
+    public float maxEmit = 0.8f;
+    private float emit;
 
     private float transition = 0f;
 
@@ -67,8 +71,13 @@ public class TeleportTarget : MonoBehaviour
         
         blinking = true;
         unblinkTime = Time.time + blinkSpeed + 0.05f;
+        SimpleFader.BeginFadeOut();
 
-        CameraFade.StartAlphaFade(Color.black, false, blinkSpeed, 0f, () =>
+    }
+
+    void Update()
+    {
+        if (blinking && Time.time >= unblinkTime)
         {
             Vector3 newPos = transform.position;
             newPos.y += offset;
@@ -77,8 +86,9 @@ public class TeleportTarget : MonoBehaviour
             MeshRenderer render;
 
             // mark all cubes as visited
-            if (cubes != null) {
-                
+            if (cubes != null)
+            {
+
                 foreach (GameObject obj in cubes)
                 {
                     if (obj != null)
@@ -92,51 +102,50 @@ public class TeleportTarget : MonoBehaviour
             // except this one...
             render = gameObject.GetComponentInChildren<MeshRenderer>();
             render.enabled = false;
-        });
-    }
 
-    void Update()
-    {
-        if (blinking && Time.time > unblinkTime)
-        {
             blinking = false;
-            //CameraFade.StartAlphaFade(Color.black, true, blinkSpeed, 0f, null);
+
+            SimpleFader.BeginFadeIn();
         }
 
         if (focused)
-        {
-            if (transition >= 1f)
-            {
-                transition = 1f;
-            } else
-            {
-                transition += .01f;
-            }
+        {    
+            transition += .03f;
         } else
         {
-            if (transition <= 0f)
-            {
-                transition = 0f;
-            }
-            else
-            {
-                transition -= .01f;
-            }
+            transition -= .03f;
         }
+
+        transition = Mathf.Clamp01(transition);
 
         size = Mathf.Lerp(minSize, maxSize, Mathf.SmoothStep(0.0f, 1.0f, transition));
         speed = Mathf.Lerp(minSpeed, maxSpeed, Mathf.SmoothStep(0.0f, 1.0f, transition));
         alpha = Mathf.Lerp(minAlpha, maxAlpha, Mathf.SmoothStep(0.0f, 1.0f, transition));
+        emit = Mathf.Lerp(minEmit, maxEmit, Mathf.SmoothStep(0.0f, 1.0f, transition));
+
     }
 
     void FixedUpdate()
     {
         cube.transform.localScale = new Vector3(size, size, size);
-        var offset = Mathf.Sin(Time.time * speed);
+        var offset = Mathf.Sin(Time.time);
         transform.Rotate(Vector3.up, 1 * speed);
         Vector3 newTransform = originalTransform;
         newTransform.y += offset/12;
         transform.position = newTransform;
+
+        Renderer r = cube.GetComponent<Renderer>();
+
+        if (r != null)
+        {
+            Color c = r.material.color;
+            c.a = alpha;
+            r.material.color = c;
+
+            // emit code based on http://answers.unity3d.com/questions/914923/standard-shader-emission-control-via-script.html
+            Color emitC = c * Mathf.LinearToGammaSpace(emit);
+            r.material.SetColor("_EmissionColor", emitC);
+        }
     }
 }
 

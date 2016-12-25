@@ -23,6 +23,8 @@ public class DoorController : MonoBehaviour {
 
     private Vector3 startL, targetL, startR, targetR;
 
+    public Camera camera;
+
 	// Use this for initialization
 	void Start () {
         state = State.CLOSED;
@@ -42,28 +44,43 @@ public class DoorController : MonoBehaviour {
     {
         if (state == State.OPEN && !toggle && Time.time > timeToClose)
         {
-            Close();
+
+            // does the camera exist?
+            if (camera != null)
+            {
+                // where is the door center on the screen?
+                Vector3 pos = camera.WorldToViewportPoint(transform.position);
+                Debug.Log(pos);
+                // only close if not looking at door
+                if (!(pos.x >= -1 && pos.x <= 1 && pos.y >= -1 && pos.y <= 1 && pos.z <= 5))
+                {
+                    Close();
+                }
+
+            } else { 
+                Close();
+            }
         }
     }
 
     public void Open()
     {
-        sound.Play();
         if (state != State.CLOSED)
         {
             return;
         }
+        sound.Play();
         state = State.OPENING;
         StartCoroutine("OpenRoutine");
     }
 
     public void Close()
     {
-        sound.Play();
         if (state != State.OPEN)
         {
             return;
         }
+        sound.Play();
         state = State.CLOSING;
         StartCoroutine("CloseRoutine");
     }
