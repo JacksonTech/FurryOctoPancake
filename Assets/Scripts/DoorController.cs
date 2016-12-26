@@ -1,20 +1,39 @@
-﻿using UnityEngine;
+﻿/*
+Copyright 2016 Cody Jackson
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
+using UnityEngine;
 using System.Collections;
 
 public class DoorController : MonoBehaviour {
 
+    // left and right door objects
     public GameObject left, right;
-    public float yaw;
 
     public enum State { OPEN, OPENING, CLOSED, CLOSING };
     private State state;
 
+    // speed
     public float moveTime = 0.25f;
-
     public float moveDist = 0.85f;
     public float moveAngle = 0f;
 
     public bool toggle = true;
+
+    // only applies if toggle is false.
+    // door won't close if you're looking at it!
     public float waitTime = 2f;
 
     private float timeToClose = 0;
@@ -23,40 +42,36 @@ public class DoorController : MonoBehaviour {
 
     private Vector3 startL, targetL, startR, targetR;
 
-    public Camera camera;
+    // used to determine if we're looking at this door
+    public Camera cam;
 
-	// Use this for initialization
 	void Start () {
         state = State.CLOSED;
         startL = left.transform.position;
         startR = right.transform.position;
 
+        // setup target locations
         targetL = startL + (Quaternion.Euler(0, moveAngle, 0) * (new Vector3(moveDist, 0, 0)));
         targetR = startR + (Quaternion.Euler(0, moveAngle, 0) * (new Vector3(-moveDist, 0, 0)));
     }
 	
-	// Update is called once per frame
-	void Update () {
-
-	}
-
     void FixedUpdate()
     {
+        // open and time to close?
         if (state == State.OPEN && !toggle && Time.time > timeToClose)
         {
 
             // does the camera exist?
-            if (camera != null)
+            if (cam != null)
             {
                 // where is the door center on the screen?
-                Vector3 pos = camera.WorldToViewportPoint(transform.position);
+                Vector3 pos = cam.WorldToViewportPoint(transform.position);
                 Debug.Log(pos);
-                // only close if not looking at door
+                // only close if not looking at door or we're further away than 5 units
                 if (!(pos.x >= -1 && pos.x <= 1 && pos.y >= -1 && pos.y <= 1 && pos.z <= 5))
                 {
                     Close();
                 }
-
             } else { 
                 Close();
             }
@@ -85,7 +100,7 @@ public class DoorController : MonoBehaviour {
         StartCoroutine("CloseRoutine");
     }
 
-    // https://forum.unity3d.com/threads/open-door-script.19019/
+    // inspired by https://forum.unity3d.com/threads/open-door-script.19019/
     IEnumerator OpenRoutine()
     {
         var endTime = Time.time + moveTime;

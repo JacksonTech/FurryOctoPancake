@@ -1,7 +1,7 @@
 Gitignore by 
 http://kleber-swf.com/the-definitive-gitignore-for-unity-projects/
 
-Sky textures by
+Sky textures, unmodified, by
 Stijn 'Ingar' Buys <ingar@osirion.org> (http://osirion.org/)
 
  
@@ -13,5 +13,5 @@ https://www.freesound.org/people/pempi/sounds/33873/ CC Attribution
 Keyboard layout from https://en.wikipedia.org/wiki/Keyboard_layout
 CC-BY-SA: Rumudiez
 
-This texture was modified by Cody Jackson. The modified files are included.
+The keyboard texture was modified by Cody Jackson. The modified files are included.
 
