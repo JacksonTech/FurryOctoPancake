@@ -1,15 +1,32 @@
 fileFormatVersion: 2
-guid: 37016b38b2e0b1c4badd6a4dd8e19b85
-timeCreated: 1482721521
+guid: f9e8bb2296da69741b17fc5d9983e522
+timeCreated: 1482797775
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Cylinder_001
+    100000: Cylinder
+    100002: Cylinder_001
+    100004: Cylinder_002
+    100006: Cylinder_003
+    100008: //RootNode
+    400000: Cylinder
+    400002: Cylinder_001
+    400004: Cylinder_002
+    400006: Cylinder_003
+    400008: //RootNode
+    2300000: Cylinder
+    2300002: Cylinder_001
+    2300004: Cylinder_002
+    2300006: Cylinder_003
+    3300000: Cylinder
+    3300002: Cylinder_001
+    3300004: Cylinder_002
+    3300006: Cylinder_003
+    4300000: Cylinder_003
+    4300002: Cylinder_002
+    4300004: Cylinder
+    4300006: Cylinder_001
     7400000: Default Take
     9500000: //RootNode
   materials:
@@ -41,7 +58,7 @@ ModelImporter:
     addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0

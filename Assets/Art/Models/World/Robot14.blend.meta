@@ -1,17 +1,73 @@
 fileFormatVersion: 2
-guid: 37016b38b2e0b1c4badd6a4dd8e19b85
-timeCreated: 1482721521
+guid: e0a8ec8462fcab440b8892224d6e15dc
+timeCreated: 1482797768
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Cylinder_001
+    100000: Armature
+    100002: Cylinder_003
+    100004: eye
+    100006: foot_l
+    100008: foot_r
+    100010: footcontrol_l
+    100012: footcontrol_r
+    100014: hand_l
+    100016: hand_r
+    100018: handcontrol_l
+    100020: handcontrol_r
+    100022: head
+    100024: head_control
+    100026: hip_l
+    100028: hip_r
+    100030: lowarm_l
+    100032: lowarm_r
+    100034: lowleg_l
+    100036: lowleg_r
+    100038: main
+    100040: neck
+    100042: //RootNode
+    100044: torso
+    100046: uparm_l
+    100048: uparm_r
+    100050: upleg_l
+    100052: upleg_r
+    100054: cross_section
+    400000: Armature
+    400002: Cylinder_003
+    400004: eye
+    400006: foot_l
+    400008: foot_r
+    400010: footcontrol_l
+    400012: footcontrol_r
+    400014: hand_l
+    400016: hand_r
+    400018: handcontrol_l
+    400020: handcontrol_r
+    400022: head
+    400024: head_control
+    400026: hip_l
+    400028: hip_r
+    400030: lowarm_l
+    400032: lowarm_r
+    400034: lowleg_l
+    400036: lowleg_r
+    400038: main
+    400040: neck
+    400042: //RootNode
+    400044: torso
+    400046: uparm_l
+    400048: uparm_r
+    400050: upleg_l
+    400052: upleg_r
+    400054: cross_section
+    2300000: cross_section
+    3300000: cross_section
+    4300000: Cylinder_003
+    4300002: cross_section
     7400000: Default Take
     9500000: //RootNode
+    13700000: Cylinder_003
   materials:
     importMaterials: 1
     materialName: 0
@@ -41,7 +97,7 @@ ModelImporter:
     addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0

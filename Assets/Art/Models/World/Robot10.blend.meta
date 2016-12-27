@@ -1,17 +1,64 @@
 fileFormatVersion: 2
-guid: 37016b38b2e0b1c4badd6a4dd8e19b85
-timeCreated: 1482721521
+guid: 2b3f64029de398b4fb74111f0d6c1646
+timeCreated: 1482797749
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Cylinder_001
+    100000: Armature
+    100002: Cylinder_003
+    100004: eye
+    100006: foot_l
+    100008: foot_l_001
+    100010: foot_r
+    100012: foot_r_001
+    100014: hand_l
+    100016: hand_r
+    100018: head
+    100020: hip_l
+    100022: hip_r
+    100024: kneeforward_l
+    100026: kneeforward_r
+    100028: lowarm_l
+    100030: lowarm_r
+    100032: lowleg_l
+    100034: lowleg_r
+    100036: neck
+    100038: //RootNode
+    100040: torso
+    100042: uparm_l
+    100044: uparm_r
+    100046: upleg_l
+    100048: upleg_r
+    400000: Armature
+    400002: Cylinder_003
+    400004: eye
+    400006: foot_l
+    400008: foot_l_001
+    400010: foot_r
+    400012: foot_r_001
+    400014: hand_l
+    400016: hand_r
+    400018: head
+    400020: hip_l
+    400022: hip_r
+    400024: kneeforward_l
+    400026: kneeforward_r
+    400028: lowarm_l
+    400030: lowarm_r
+    400032: lowleg_l
+    400034: lowleg_r
+    400036: neck
+    400038: //RootNode
+    400040: torso
+    400042: uparm_l
+    400044: uparm_r
+    400046: upleg_l
+    400048: upleg_r
+    4300000: Cylinder_003
     7400000: Default Take
     9500000: //RootNode
+    13700000: Cylinder_003
   materials:
     importMaterials: 1
     materialName: 0
@@ -41,7 +88,7 @@ ModelImporter:
     addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0

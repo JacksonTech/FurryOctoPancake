@@ -1,17 +1,76 @@
 fileFormatVersion: 2
-guid: 37016b38b2e0b1c4badd6a4dd8e19b85
-timeCreated: 1482721521
+guid: 9f9d517de25b8bc4a967ccfc7390188c
+timeCreated: 1482797760
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Cylinder_001
+    100000: Armature
+    100002: Cylinder_003
+    100004: eye
+    100006: foot_l
+    100008: foot_l_001
+    100010: foot_r
+    100012: foot_r_001
+    100014: hand_l
+    100016: hand_r
+    100018: head
+    100020: hip_l
+    100022: hip_r
+    100024: kneeforward_l
+    100026: kneeforward_r
+    100028: low_leg_l
+    100030: low_leg_l_001
+    100032: low_leg_r
+    100034: low_leg_r_001
+    100036: lowarm_l
+    100038: lowarm_l_001
+    100040: lowarm_r
+    100042: lowarm_r_001
+    100044: neck
+    100046: //RootNode
+    100048: torso
+    100050: uparm_l
+    100052: uparm_l_001
+    100054: uparm_r
+    100056: uparm_r_001
+    100058: upleg_l
+    100060: upleg_r
+    400000: Armature
+    400002: Cylinder_003
+    400004: eye
+    400006: foot_l
+    400008: foot_l_001
+    400010: foot_r
+    400012: foot_r_001
+    400014: hand_l
+    400016: hand_r
+    400018: head
+    400020: hip_l
+    400022: hip_r
+    400024: kneeforward_l
+    400026: kneeforward_r
+    400028: low_leg_l
+    400030: low_leg_l_001
+    400032: low_leg_r
+    400034: low_leg_r_001
+    400036: lowarm_l
+    400038: lowarm_l_001
+    400040: lowarm_r
+    400042: lowarm_r_001
+    400044: neck
+    400046: //RootNode
+    400048: torso
+    400050: uparm_l
+    400052: uparm_l_001
+    400054: uparm_r
+    400056: uparm_r_001
+    400058: upleg_l
+    400060: upleg_r
+    4300000: Cylinder_003
     7400000: Default Take
     9500000: //RootNode
+    13700000: Cylinder_003
   materials:
     importMaterials: 1
     materialName: 0
@@ -41,7 +100,7 @@ ModelImporter:
     addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0

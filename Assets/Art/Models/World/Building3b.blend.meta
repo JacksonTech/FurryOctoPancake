@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 37016b38b2e0b1c4badd6a4dd8e19b85
-timeCreated: 1482721521
+guid: c2c1d1e6a435d6041a2fa3bbd2b0e921
+timeCreated: 1482794019
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Cylinder_001
+    4300000: Cube
     7400000: Default Take
     9500000: //RootNode
   materials:

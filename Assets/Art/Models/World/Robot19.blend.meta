@@ -1,0 +1,294 @@
+fileFormatVersion: 2
+guid: a0a97809cb376134cb7f83378a868033
+timeCreated: 1482798715
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Cylinder_003
+    100004: eye
+    100006: foot_l
+    100008: foot_r
+    100010: footcontrol_l
+    100012: footcontrol_r
+    100014: hand_l
+    100016: hand_r
+    100018: handcontrol_l
+    100020: handcontrol_r
+    100022: head
+    100024: head_control
+    100026: hip_l
+    100028: hip_r
+    100030: lowarm_l
+    100032: lowarm_r
+    100034: lowleg_l
+    100036: lowleg_r
+    100038: main
+    100040: neck
+    100042: //RootNode
+    100044: torso
+    100046: uparm_l
+    100048: uparm_r
+    100050: upleg_l
+    100052: upleg_r
+    400000: Armature
+    400002: Cylinder_003
+    400004: eye
+    400006: foot_l
+    400008: foot_r
+    400010: footcontrol_l
+    400012: footcontrol_r
+    400014: hand_l
+    400016: hand_r
+    400018: handcontrol_l
+    400020: handcontrol_r
+    400022: head
+    400024: head_control
+    400026: hip_l
+    400028: hip_r
+    400030: lowarm_l
+    400032: lowarm_r
+    400034: lowleg_l
+    400036: lowleg_r
+    400038: main
+    400040: neck
+    400042: //RootNode
+    400044: torso
+    400046: uparm_l
+    400048: uparm_r
+    400050: upleg_l
+    400052: upleg_r
+    4300000: Cylinder_003
+    7400000: Default Take
+    7400002: Type
+    9500000: //RootNode
+    13700000: Cylinder_003
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 119
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/main
+        weight: 1
+      - path: Armature/main/footcontrol_l
+        weight: 1
+      - path: Armature/main/footcontrol_r
+        weight: 1
+      - path: Armature/main/handcontrol_l
+        weight: 1
+      - path: Armature/main/handcontrol_r
+        weight: 1
+      - path: Armature/main/head_control
+        weight: 1
+      - path: Armature/main/hip_l
+        weight: 1
+      - path: Armature/main/hip_l/upleg_l
+        weight: 1
+      - path: Armature/main/hip_l/upleg_l/lowleg_l
+        weight: 1
+      - path: Armature/main/hip_l/upleg_l/lowleg_l/foot_l
+        weight: 1
+      - path: Armature/main/hip_r
+        weight: 1
+      - path: Armature/main/hip_r/upleg_r
+        weight: 1
+      - path: Armature/main/hip_r/upleg_r/lowleg_r
+        weight: 1
+      - path: Armature/main/hip_r/upleg_r/lowleg_r/foot_r
+        weight: 1
+      - path: Armature/main/torso
+        weight: 1
+      - path: Armature/main/torso/neck
+        weight: 1
+      - path: Armature/main/torso/neck/head
+        weight: 1
+      - path: Armature/main/torso/neck/head/eye
+        weight: 1
+      - path: Armature/main/torso/uparm_l
+        weight: 1
+      - path: Armature/main/torso/uparm_l/lowarm_l
+        weight: 1
+      - path: Armature/main/torso/uparm_l/lowarm_l/hand_l
+        weight: 1
+      - path: Armature/main/torso/uparm_r
+        weight: 1
+      - path: Armature/main/torso/uparm_r/lowarm_r
+        weight: 1
+      - path: Armature/main/torso/uparm_r/lowarm_r/hand_r
+        weight: 1
+      - path: Cylinder_003
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Type
+      takeName: Type
+      firstFrame: 0
+      lastFrame: 119
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/main
+        weight: 1
+      - path: Armature/main/footcontrol_l
+        weight: 1
+      - path: Armature/main/footcontrol_r
+        weight: 1
+      - path: Armature/main/handcontrol_l
+        weight: 1
+      - path: Armature/main/handcontrol_r
+        weight: 1
+      - path: Armature/main/head_control
+        weight: 1
+      - path: Armature/main/hip_l
+        weight: 1
+      - path: Armature/main/hip_l/upleg_l
+        weight: 1
+      - path: Armature/main/hip_l/upleg_l/lowleg_l
+        weight: 1
+      - path: Armature/main/hip_l/upleg_l/lowleg_l/foot_l
+        weight: 1
+      - path: Armature/main/hip_r
+        weight: 1
+      - path: Armature/main/hip_r/upleg_r
+        weight: 1
+      - path: Armature/main/hip_r/upleg_r/lowleg_r
+        weight: 1
+      - path: Armature/main/hip_r/upleg_r/lowleg_r/foot_r
+        weight: 1
+      - path: Armature/main/torso
+        weight: 1
+      - path: Armature/main/torso/neck
+        weight: 1
+      - path: Armature/main/torso/neck/head
+        weight: 1
+      - path: Armature/main/torso/neck/head/eye
+        weight: 1
+      - path: Armature/main/torso/uparm_l
+        weight: 1
+      - path: Armature/main/torso/uparm_l/lowarm_l
+        weight: 1
+      - path: Armature/main/torso/uparm_l/lowarm_l/hand_l
+        weight: 1
+      - path: Armature/main/torso/uparm_r
+        weight: 1
+      - path: Armature/main/torso/uparm_r/lowarm_r
+        weight: 1
+      - path: Armature/main/torso/uparm_r/lowarm_r/hand_r
+        weight: 1
+      - path: Cylinder_003
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

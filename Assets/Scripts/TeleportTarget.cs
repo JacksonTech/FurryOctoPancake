@@ -24,7 +24,7 @@ public class TeleportTarget : MonoBehaviour
     public Camera cam;
     public GameObject cube;
 
-    public float blinkSpeed = .3f;
+    public float blinkSpeed = .35f;
 
     public float maxSpeed = 4f;
     public float minSpeed = 1f;

@@ -1,15 +1,43 @@
 fileFormatVersion: 2
-guid: 37016b38b2e0b1c4badd6a4dd8e19b85
-timeCreated: 1482721521
+guid: ab4c5aa29498e6d4d8fef945880bcff7
+timeCreated: 1482797762
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Cylinder_001
+    100000: Armature
+    100002: Bone
+    100004: Cylinder_003
+    100006: foot_l
+    100008: hand_l
+    100010: head
+    100012: hip_l
+    100014: kneeforward_l
+    100016: low_leg_l
+    100018: lowarm_l
+    100020: neck
+    100022: //RootNode
+    100024: shoulder_l
+    100026: uparm_l
+    100028: upleg_l
+    400000: Armature
+    400002: Bone
+    400004: Cylinder_003
+    400006: foot_l
+    400008: hand_l
+    400010: head
+    400012: hip_l
+    400014: kneeforward_l
+    400016: low_leg_l
+    400018: lowarm_l
+    400020: neck
+    400022: //RootNode
+    400024: shoulder_l
+    400026: uparm_l
+    400028: upleg_l
+    2300000: Cylinder_003
+    3300000: Cylinder_003
+    4300000: Cylinder_003
     7400000: Default Take
     9500000: //RootNode
   materials:
@@ -41,7 +69,7 @@ ModelImporter:
     addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0

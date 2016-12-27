@@ -15,3 +15,4 @@ CC-BY-SA: Rumudiez
 
 The keyboard texture was modified by Cody Jackson. The modified files are included.
 
+Google VR Unity SDK licened under the Apache 2.0 license.
