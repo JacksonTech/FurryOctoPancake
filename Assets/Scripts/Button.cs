@@ -42,7 +42,6 @@ public class Button : MonoBehaviour
         }
         else
         {
-
             door.Open();
         }
     }
