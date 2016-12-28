@@ -22,10 +22,29 @@ using UnityEngine.EventSystems;
 public class Button : MonoBehaviour
 {
     public DoorController door;
+    public SceneController sceneController;
+
+    public string itemName;
 
     public void clickMe()
     {
-        door.Open();
+
+        if (sceneController != null)
+        {
+            if (itemName != null && !sceneController.isLocked(itemName))
+            {
+                door.Open();
+            }
+            else
+            {
+                // nope sound
+            }
+        }
+        else
+        {
+
+            door.Open();
+        }
     }
 }
 
