@@ -21,6 +21,10 @@ ModelImporter:
     100026: Cube_021
     100028: Cube_022
     100030: //RootNode
+    100032: apart
+    100034: apart_hall
+    100036: exterior
+    100038: office
     400000: Cube_001
     400002: Cube_002
     400004: Cube_003
@@ -37,6 +41,10 @@ ModelImporter:
     400026: Cube_021
     400028: Cube_022
     400030: //RootNode
+    400032: apart
+    400034: apart_hall
+    400036: exterior
+    400038: office
     2300000: Cube_001
     2300002: Cube_002
     2300004: Cube_003
@@ -52,6 +60,10 @@ ModelImporter:
     2300024: Cube_020
     2300026: Cube_021
     2300028: Cube_022
+    2300030: apart
+    2300032: apart_hall
+    2300034: exterior
+    2300036: office
     3300000: Cube_001
     3300002: Cube_002
     3300004: Cube_003
@@ -67,6 +79,10 @@ ModelImporter:
     3300024: Cube_020
     3300026: Cube_021
     3300028: Cube_022
+    3300030: apart
+    3300032: apart_hall
+    3300034: exterior
+    3300036: office
     4300000: Cube_022
     4300002: Cube_021
     4300004: Cube_020
@@ -82,6 +98,10 @@ ModelImporter:
     4300024: Cube_002
     4300026: Cube_003
     4300028: Cube_001
+    4300030: apart_hall
+    4300032: office
+    4300034: apart
+    4300036: exterior
     7400000: Default Take
     9500000: //RootNode
   materials:

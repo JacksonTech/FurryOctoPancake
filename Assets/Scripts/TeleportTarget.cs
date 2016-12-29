@@ -48,12 +48,14 @@ public class TeleportTarget : MonoBehaviour
 
     public float unblinkTime;
 
-    private bool blinking;
+    public bool blinking;
     private bool focused;
 
     private Vector3 originalTransform;
 
     private static GameObject[] cubes;
+
+    public Action fadedAction;
 
     void Start()
     {
@@ -95,6 +97,12 @@ public class TeleportTarget : MonoBehaviour
     {
         if (blinking && Time.time >= unblinkTime)
         {
+            if (fadedAction != null)
+            {
+                fadedAction();
+                return;
+            }
+
             Vector3 newPos = transform.position;
             newPos.y += offset;
             cam.transform.position = newPos;

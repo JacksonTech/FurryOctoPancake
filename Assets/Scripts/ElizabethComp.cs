@@ -29,14 +29,13 @@ public class ElizabethComp : MonoBehaviour {
     private Material[] mats;
     private float changeMe;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
+    private bool dontChangeBaby;
+
+    public GameObject exitObject;
 	
 	// Update is called once per frame
 	void Update () {
-	    if (Time.time > changeMe)
+	    if (Time.time > changeMe && !dontChangeBaby)
         {
             mats = monitor.GetComponent<Renderer>().materials;
             mats[1] = loginScreen;
@@ -57,6 +56,10 @@ public class ElizabethComp : MonoBehaviour {
             mats = monitor.GetComponent<Renderer>().materials;
             mats[1] = emailScreen;
             monitor.GetComponent<Renderer>().materials = mats;
+            dontChangeBaby = true;
+            exitObject.GetComponent<Collider>().enabled = true;
+            exitObject.GetComponentInChildren<Renderer>().enabled = true;
+            sceneController.unlockObject("elevator");
         }
     }
 }
