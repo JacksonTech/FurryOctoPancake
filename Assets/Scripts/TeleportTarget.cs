@@ -120,7 +120,7 @@ public class TeleportTarget : MonoBehaviour
                     render = obj.GetComponent<MeshRenderer>();
                     render.enabled = true;
 
-                    collider = obj.GetComponentInParent<SphereCollider>();
+                    collider = obj.GetComponentInParent<Collider>();
                     collider.enabled = true; 
                 }
             }
@@ -129,7 +129,7 @@ public class TeleportTarget : MonoBehaviour
             render = gameObject.GetComponentInChildren<MeshRenderer>();
             render.enabled = false;
 
-            collider = gameObject.GetComponentInParent<SphereCollider>();
+            collider = gameObject.GetComponentInParent<Collider>();
             collider.enabled = false;
 
             blinking = false;
@@ -161,7 +161,7 @@ public class TeleportTarget : MonoBehaviour
         transform.Rotate(Vector3.up, 1 * speed);
         Vector3 newTransform = originalTransform;
         newTransform.y += offset/12;
-        transform.position = newTransform;
+        //transform.position = newTransform;
 
         Renderer r = cube.GetComponent<Renderer>();
 
