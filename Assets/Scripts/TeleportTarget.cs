@@ -109,6 +109,7 @@ public class TeleportTarget : MonoBehaviour
 
             MeshRenderer render;
             Collider collider;
+            ParticleSystem pSystem;
 
             // mark all cubes as visited
             if (cubes != null)
@@ -121,7 +122,10 @@ public class TeleportTarget : MonoBehaviour
                     render.enabled = true;
 
                     collider = obj.GetComponentInParent<Collider>();
-                    collider.enabled = true; 
+                    collider.enabled = true;
+
+                    pSystem = obj.transform.parent.gameObject.GetComponentInChildren<ParticleSystem>();
+                    pSystem.Clear();
                 }
             }
 
@@ -131,6 +135,12 @@ public class TeleportTarget : MonoBehaviour
 
             collider = gameObject.GetComponentInParent<Collider>();
             collider.enabled = false;
+
+            pSystem = GetComponentInChildren<ParticleSystem>();
+            if (pSystem != null)
+            {
+                pSystem.Play();
+            }
 
             blinking = false;
 
