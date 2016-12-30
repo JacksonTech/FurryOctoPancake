@@ -24,6 +24,8 @@ public class Button : MonoBehaviour
     public DoorController door;
     public SceneController sceneController;
 
+    public GvrAudioSource sound;
+
     public string itemName;
 
     public void clickMe()
@@ -37,7 +39,10 @@ public class Button : MonoBehaviour
             }
             else
             {
-                // nope sound
+                if (sound != null)
+                {
+                    sound.Play();
+                }
             }
         }
         else

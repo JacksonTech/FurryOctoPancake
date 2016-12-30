@@ -45,6 +45,7 @@ public class ElizabethComp : MonoBehaviour {
 
     public void clickMe()
     {
+        GetComponent<GvrAudioSource>().Play();
         if (sceneController.isLocked("computer"))
         {
             mats = monitor.GetComponent<Renderer>().materials;
@@ -59,6 +60,7 @@ public class ElizabethComp : MonoBehaviour {
             dontChangeBaby = true;
             exitObject.GetComponent<Collider>().enabled = true;
             exitObject.GetComponentInChildren<Renderer>().enabled = true;
+            exitObject.GetComponentInChildren<ParticleSystem>().Play();
             sceneController.unlockObject("elevator");
         }
     }

@@ -55,22 +55,24 @@ public class RobotScript : MonoBehaviour {
 
     void LateUpdate()
     {
-        if (nearPlayer)
-        {
+   
+
+        if (clickedMe)
+            {
+
+            // turn head!
             Quaternion newDir = Quaternion.LookRotation(cam.transform.position - head.transform.position);
             newDir = newDir * turnMyHead;
-            head.transform.rotation = Quaternion.Slerp(lastRot, newDir, 6f*Time.deltaTime);
+            head.transform.rotation = Quaternion.Slerp(lastRot, newDir, 6f * Time.deltaTime);
             lastRot = head.transform.rotation;
 
-            if (clickedMe)
-            {
-                // make chat bubble appear!
-                chatBubble.transform.localScale = Vector3.Slerp(lastScale, openScale, 6f * Time.deltaTime);
-                lastScale = chatBubble.transform.localScale;
+            // make chat bubble appear!
+            chatBubble.transform.localScale = Vector3.Slerp(lastScale, openScale, 6f * Time.deltaTime);
+            lastScale = chatBubble.transform.localScale;
 
-                chatBubble.transform.position = Vector3.Slerp(lastPosition, openPosition, 6f * Time.deltaTime);
-                lastPosition = chatBubble.transform.position;
-            }
+            chatBubble.transform.position = Vector3.Slerp(lastPosition, openPosition, 6f * Time.deltaTime);
+            lastPosition = chatBubble.transform.position;
+            
         } else
         {
             // make chat bubble disappear!

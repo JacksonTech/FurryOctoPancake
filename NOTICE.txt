@@ -16,3 +16,14 @@ CC-BY-SA: Rumudiez
 The keyboard texture was modified by Cody Jackson. The modified files are included.
 
 Google VR Unity SDK licened under the Apache 2.0 license.
+
+Wind sounds by kangaroovindaloo on freesound.org (CC BY 3.0)
+
+https://www.freesound.org/people/kangaroovindaloo/sounds/205966/
+	
+ambient.wav (originally: sound-underwater2.wav) by zippi1
+			
+(http://www.freesound.org/people/zippi1/sounds/18265/)
+	
+
+buzzer sound by hypocore under https://freesound.org/people/hypocore/sounds/164089/

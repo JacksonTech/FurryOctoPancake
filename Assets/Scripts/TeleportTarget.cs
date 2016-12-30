@@ -125,7 +125,10 @@ public class TeleportTarget : MonoBehaviour
                     collider.enabled = true;
 
                     pSystem = obj.transform.parent.gameObject.GetComponentInChildren<ParticleSystem>();
-                    pSystem.Clear();
+                    if (pSystem.isStopped)
+                    {
+                        pSystem.Play();
+                    }
                 }
             }
 
@@ -139,7 +142,8 @@ public class TeleportTarget : MonoBehaviour
             pSystem = GetComponentInChildren<ParticleSystem>();
             if (pSystem != null)
             {
-                pSystem.Play();
+                pSystem.Stop();
+                pSystem.Clear();
             }
 
             blinking = false;
@@ -160,7 +164,7 @@ public class TeleportTarget : MonoBehaviour
         size = Mathf.Lerp(minSize, maxSize, Mathf.SmoothStep(0.0f, 1.0f, transition));
         speed = Mathf.Lerp(minSpeed, maxSpeed, Mathf.SmoothStep(0.0f, 1.0f, transition));
         alpha = Mathf.Lerp(minAlpha, maxAlpha, Mathf.SmoothStep(0.0f, 1.0f, transition));
-        emit = Mathf.Lerp(minEmit, maxEmit, Mathf.SmoothStep(0.0f, 1.0f, transition));
+        emit = Mathf.Lerp(minEmit, maxEmit, Mathf.SmoothStep(0.0f, 12.0f, transition));
 
     }
 
