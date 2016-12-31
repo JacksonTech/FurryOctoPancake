@@ -1,3 +1,7 @@
+Music by Mark Sparling, CC-BY
+https://soundcloud.com/marksparling
+http://marksparling.com/
+
 Gitignore by 
 http://kleber-swf.com/the-definitive-gitignore-for-unity-projects/
 
@@ -8,11 +12,11 @@ Stijn 'Ingar' Buys <ingar@osirion.org> (http://osirion.org/)
 under CC-By-SA 3.0
 
 Audio (elevator sound) by Pempi
-https://www.freesound.org/people/pempi/sounds/33873/ CC Attribution
+https://www.freesound.org/people/pempi/sounds/33873/ 
+CC Attribution
 
 Keyboard layout from https://en.wikipedia.org/wiki/Keyboard_layout
 CC-BY-SA: Rumudiez
-
 The keyboard texture was modified by Cody Jackson. The modified files are included.
 
 Google VR Unity SDK licened under the Apache 2.0 license.
@@ -21,9 +25,8 @@ Wind sounds by kangaroovindaloo on freesound.org (CC BY 3.0)
 
 https://www.freesound.org/people/kangaroovindaloo/sounds/205966/
 	
-ambient.wav (originally: sound-underwater2.wav) by zippi1
-			
-(http://www.freesound.org/people/zippi1/sounds/18265/)
-	
+ambient noise by IanStarGem		
+http://www.freesound.org/people/IanStarGem/sounds/271096/
 
-buzzer sound by hypocore under https://freesound.org/people/hypocore/sounds/164089/
+buzzer sound by hypocore under CC0
+https://freesound.org/people/hypocore/sounds/164089/

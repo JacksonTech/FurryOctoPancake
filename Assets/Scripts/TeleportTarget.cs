@@ -192,6 +192,7 @@ public class TeleportTarget : MonoBehaviour
             // emit code based on http://answers.unity3d.com/questions/914923/standard-shader-emission-control-via-script.html
             emitColor = initialColor * Mathf.LinearToGammaSpace(emit);
             r.material.SetColor("_EmissionColor", emitColor);
+            DynamicGI.UpdateMaterials(r);
         }
     }
 }
