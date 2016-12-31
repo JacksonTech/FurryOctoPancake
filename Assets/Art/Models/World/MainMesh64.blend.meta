@@ -32,6 +32,9 @@ ModelImporter:
     100048: Cube_017
     100050: Skyscraper
     100052: WindowLedges1
+    100054: Cube_020
+    100056: Skyscraper_001
+    100058: Skyscraper_002
     400000: apart
     400002: apart_hall
     400004: Cube_002
@@ -59,6 +62,9 @@ ModelImporter:
     400048: Cube_017
     400050: Skyscraper
     400052: WindowLedges1
+    400054: Cube_020
+    400056: Skyscraper_001
+    400058: Skyscraper_002
     2300000: apart
     2300002: apart_hall
     2300004: Cube_002
@@ -85,6 +91,9 @@ ModelImporter:
     2300046: Cube_017
     2300048: Skyscraper
     2300050: WindowLedges1
+    2300052: Cube_020
+    2300054: Skyscraper_001
+    2300056: Skyscraper_002
     3300000: apart
     3300002: apart_hall
     3300004: Cube_002
@@ -111,6 +120,9 @@ ModelImporter:
     3300046: Cube_017
     3300048: Skyscraper
     3300050: WindowLedges1
+    3300052: Cube_020
+    3300054: Skyscraper_001
+    3300056: Skyscraper_002
     4300000: apart_hall
     4300002: office
     4300004: apart
@@ -137,6 +149,9 @@ ModelImporter:
     4300046: Cube_017
     4300048: Skyscraper
     4300050: WindowLedges1
+    4300052: Cube_020
+    4300054: Skyscraper_002
+    4300056: Skyscraper_001
     7400000: Default Take
     9500000: //RootNode
   materials:
