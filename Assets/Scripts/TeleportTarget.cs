@@ -35,11 +35,11 @@ public class TeleportTarget : MonoBehaviour
     private float size;
 
     public float minAlpha = 0.3f;
-    public float maxAlpha = 0.7f;
+    public float maxAlpha = 1f;
     private float alpha;
 
     public float minEmit = 0.0f;
-    public float maxEmit = 0.8f;
+    public float maxEmit = 4f;
     private float emit;
 
     private float transition = 0f;
@@ -57,8 +57,12 @@ public class TeleportTarget : MonoBehaviour
 
     public Action fadedAction;
 
+    [ColorUsage(true, true, 0, 8, 1 / 8, 3)] private Color initialColor, diffuseColor, emitColor;
+
     void Start()
     {
+        initialColor = cube.GetComponent<Renderer>().material.GetColor("_EmissionColor");
+
         // left over from when I was using setEnabled instead of disabling the renderer. Don't want to disable scripts!
         if (cubes == null)
         {
@@ -164,7 +168,7 @@ public class TeleportTarget : MonoBehaviour
         size = Mathf.Lerp(minSize, maxSize, Mathf.SmoothStep(0.0f, 1.0f, transition));
         speed = Mathf.Lerp(minSpeed, maxSpeed, Mathf.SmoothStep(0.0f, 1.0f, transition));
         alpha = Mathf.Lerp(minAlpha, maxAlpha, Mathf.SmoothStep(0.0f, 1.0f, transition));
-        emit = Mathf.Lerp(minEmit, maxEmit, Mathf.SmoothStep(0.0f, 12.0f, transition));
+        emit = Mathf.Lerp(minEmit, maxEmit, Mathf.SmoothStep(0.0f, 1.0f, transition));
 
     }
 
@@ -181,13 +185,13 @@ public class TeleportTarget : MonoBehaviour
 
         if (r != null)
         {
-            Color c = r.material.color;
-            c.a = alpha;
-            r.material.color = c;
+            diffuseColor = r.material.color;
+            diffuseColor.a = alpha;
+            r.material.color = diffuseColor;
 
             // emit code based on http://answers.unity3d.com/questions/914923/standard-shader-emission-control-via-script.html
-            Color emitC = c * Mathf.LinearToGammaSpace(emit);
-            r.material.SetColor("_EmissionColor", emitC);
+            emitColor = initialColor * Mathf.LinearToGammaSpace(emit);
+            r.material.SetColor("_EmissionColor", emitColor);
         }
     }
 }
